@@ -44,8 +44,6 @@ public class Signup extends PageBase {
     By para = By.xpath("/html/body/ion-app/ion-modal/div/ng-component/ion-content/div[2]/div/h2");
 
 
-
-
     public Signup(IOSDriver driver) {
         super(driver);
         this.wait = new WebDriverWait(driver, 30);
@@ -133,13 +131,9 @@ public class Signup extends PageBase {
     public void closeWelcomeMessage() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeCloseButton));
         driver.findElement(welcomeCloseButton).click();
-        /*wait.until(ExpectedConditions.visibilityOfElementLocated(quickPickElement));
-        Assert.assertEquals(driver.findElement(quickPickElement).getText(),quickPickText);*/
     }
 
     public void verifyUserName() {
-        /*wait.until(ExpectedConditions.visibilityOfElementLocated(menubutton));
-        driver.findElement(menubutton).click();*/
         wait.until(ExpectedConditions.visibilityOfElementLocated(userNameElement));
         Assert.assertEquals(driver.findElement(userNameElement).getText(), firstName);
     }
@@ -147,8 +141,6 @@ public class Signup extends PageBase {
     public void selectReadMoreBtn() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(readMoreButton));
         driver.findElement(readMoreButton).click();
-        /*wait.until(ExpectedConditions.visibilityOfElementLocated(quickPickElement));
-        Assert.assertEquals(driver.findElement(quickPickElement).getText(),quickPickText);*/
     }
 
 }

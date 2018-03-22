@@ -60,15 +60,8 @@ public class SignupTest extends AppiumDriverBase {
 
     @Test(description = "Verify name of the user signed up is displayed correctly", priority = 6)
     public void verifySignedUpUserTest() {
-        //signup.swipeHorizontal();
         signup.closeWelcomeMessage();
-        //changeToNative();
         signup.verifySignedUpUser();
-        try {
-                   //(iosDriver,100,200,1);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @Test(description = "Verify that the individual article opens correctly", priority = 7)

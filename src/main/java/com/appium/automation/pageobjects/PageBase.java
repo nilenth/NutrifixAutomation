@@ -29,7 +29,7 @@ public class PageBase {
 
     public void swipeVertical() {
         Dimension size = driver.manage().window().getSize();
-        driver.swipe(size.width/2,  size.height-1, size.width/2,  1, 2000);
+        driver.swipe(size.width / 2, size.height - 1, size.width / 2, 1, 2000);
     }
 
 }
